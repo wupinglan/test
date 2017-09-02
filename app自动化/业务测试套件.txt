@@ -1,0 +1,10 @@
+*** Keywords ***
+Andriod公用参数
+    [Arguments]    ${app}
+    Open Application    http://0.0.0.0:4723/wd/hub    platformName=Android    platformVersion=4.2.2    deviceName=emulator-5554    app=${app}    appPackage=com.sinovatech.unicom.ui
+    ...    appActivity=com.sinovatech.unicom.ui.WelcomeClient
+
+IOS共用参数
+    [Arguments]    ${app}
+    Open Application    http://0.0.0.0:4723/wd/hub    platformName=ios    platformVersion=10.2    udid=6A69CA14-42FF-4878-87A9-6A26F322995E    app=${app}    deviceName=iPhone
+    ...    automationName=XCUITest

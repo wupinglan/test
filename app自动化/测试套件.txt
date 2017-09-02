@@ -1,0 +1,10 @@
+*** Settings ***
+Library           AppiumLibrary
+Resource          业务测试套件.txt
+
+*** Test Cases ***
+search
+    Andriod公用参数    /Users/wupinglan/Documents/workspace/automation/res/app/android/Unicom_gphone_5.0.2(生产环境debug)-20170217-1515.apk
+
+IosSearch
+    IOS共用参数    /Users/wupinglan/Downloads/IOS.ipa

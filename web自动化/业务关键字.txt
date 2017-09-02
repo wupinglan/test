@@ -1,0 +1,14 @@
+*** Settings ***
+Resource          测试步骤/公共操作.txt
+
+*** Keywords ***
+百度搜索
+    [Arguments]    ${search}    ${result}
+    打开浏览器    http://baidu.com    ff
+    input text    id=kw    ${search}
+    click element    id=su
+    sleep    2
+    ${title}    Get Title
+    Run Keyword And Continue On Failure    Should Contain    ${title}    ${result}
+    截图
+    关闭浏览器

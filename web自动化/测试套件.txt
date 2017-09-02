@@ -1,0 +1,8 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          业务关键字.txt
+Library           Screenshot
+
+*** Test Cases ***
+test
+    百度搜索    selenium    ss
